@@ -15,4 +15,9 @@ cmake ${CMAKE_ARGS} \
 
 cmake --build . --config Release
 cmake --build . --config Release --target install
+
+# Debug
+otool -L ${CONDA_PREFIX}/lib/libignition-sensor4.dylib
+otool -L ${CONDA_PREFIX}/lib/libOgreMain.dylib
+
 ctest --output-on-failure -C Release
