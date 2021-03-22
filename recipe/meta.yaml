@@ -37,6 +37,7 @@ requirements:
     - xorg-libx11                        # [unix]
     - xorg-libxext                       # [unix]
     - libglu                             # [linux]
+    - libblas
     - libignition-cmake2
     - libprotobuf
     - libignition-math6
