@@ -7,8 +7,8 @@ cd build
 curl -O -L https://github.com/traversaro/robotology-superbuild/releases/download/2020_11_test_4/lddx
 chmod +x ./lddx
 ./lddx -h
-./lddx -r ${PREFIX}/lib/libOgreMain.dylib
-./lddx -r ${PREFIX}/lib/libignition-rendering4.dylib
+./lddx -r -d ${PREFIX}/lib/libOgreMain.dylib
+./lddx -r -d ${PREFIX}/lib/libignition-rendering4.dylib
 
 cmake ${CMAKE_ARGS} \
       -DCMAKE_BUILD_TYPE=Release \
@@ -28,7 +28,7 @@ otool -L ${PREFIX}/lib/libignition-sensors4.dylib
 otool -L ${PREFIX}/lib/libOgreMain.dylib
 otool -L ${PREFIX}/lib/libignition-sensors4-lidar.dylib
 
-./lddx -r ${PREFIX}/lib/libignition-sensors4.dylib
-./lddx -r ${PREFIX}/lib/libignition-sensors4-lidar.dylib
+./lddx -r -d ${PREFIX}/lib/libignition-sensors4.dylib
+./lddx -r -d ${PREFIX}/lib/libignition-sensors4-lidar.dylib
 
 ctest --output-on-failure -C Release
