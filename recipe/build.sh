@@ -4,7 +4,7 @@ mkdir build
 cd build
 
 # Download lddx tool for macOS debugging 
-curl -O https://github.com/traversaro/robotology-superbuild/releases/download/2020_11_test_4/lddx
+curl -O -L https://github.com/traversaro/robotology-superbuild/releases/download/2020_11_test_4/lddx
 chmod +x ./lddx
 ./lddx -h
 ./lddx ${PREFIX}/lib/libOgreMain.dylib
