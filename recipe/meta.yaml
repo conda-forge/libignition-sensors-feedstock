@@ -24,7 +24,19 @@ requirements:
     - make  # [not win]
     - cmake
     - pkg-config
+    # x11
+    - {{ cdt('mesa-libgl-devel') }}      # [unix]
+    - {{ cdt('mesa-dri-drivers') }}      # [unix]
+    - {{ cdt('libselinux') }}            # [linux]
+    - {{ cdt('libxdamage') }}            # [linux]
+    - {{ cdt('libxxf86vm') }}            # [linux]
+    - {{ cdt('libxfixes') }}             # [linux]
+    - {{ cdt('libxext') }}               # [linux]
+    - {{ cdt('libxau') }}                # [linux]
   host:
+    - xorg-libx11                        # [unix]
+    - xorg-libxext                       # [unix]
+    - libglu                             # [linux]
     - libignition-cmake2
     - libprotobuf
     - libignition-math6
