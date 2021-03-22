@@ -7,8 +7,15 @@ cd build
 curl -O -L https://github.com/traversaro/robotology-superbuild/releases/download/2020_11_test_4/lddx
 chmod +x ./lddx
 ./lddx -h
-./lddx -r -d ${PREFIX}/lib/libOgreMain.dylib
-./lddx -r -d ${PREFIX}/lib/libignition-rendering4.dylib
+
+echo "lddx RenderSystem_GL"
+./lddx -r -d ${PREFIX}/lib/OGRE/RenderSystem_GL.dylib
+echo "lddx Plugin_ParticleFX"
+./lddx -r -d ${PREFIX}/lib/OGRE/Plugin_ParticleFX.dylib
+echo "lddx Plugin_BSPSceneManager"
+./lddx -r -d ${PREFIX}/lib/OGRE/Plugin_BSPSceneManager.dylib
+echo "lddx Plugin_OctreeSceneManager"
+./lddx -r -d ${PREFIX}/lib/OGRE/Plugin_OctreeSceneManager.dylib
 
 cmake ${CMAKE_ARGS} \
       -DCMAKE_BUILD_TYPE=Release \
@@ -22,13 +29,5 @@ cmake ${CMAKE_ARGS} \
 
 cmake --build . --config Release
 cmake --build . --config Release --target install
-
-# Debug
-otool -L ${PREFIX}/lib/libignition-sensors4.dylib
-otool -L ${PREFIX}/lib/libOgreMain.dylib
-otool -L ${PREFIX}/lib/libignition-sensors4-lidar.dylib
-
-./lddx -r -d ${PREFIX}/lib/libignition-sensors4.dylib
-./lddx -r -d ${PREFIX}/lib/libignition-sensors4-lidar.dylib
 
 ctest --output-on-failure -C Release
