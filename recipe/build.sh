@@ -19,5 +19,6 @@ cmake --build . --config Release --target install
 # Debug
 otool -L ${PREFIX}/lib/libignition-sensors4.dylib
 otool -L ${PREFIX}/lib/libOgreMain.dylib
+otool -L ${PREFIX}/lib/libignition-sensors4-lidar.dylib
 
 ctest --output-on-failure -C Release
