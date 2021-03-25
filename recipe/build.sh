@@ -15,4 +15,4 @@ cmake ${CMAKE_ARGS} \
 
 cmake --build . --config Release
 cmake --build . --config Release --target install
-DYLD_FALLBACK_LIBRARY_PATH=${PREFIX}/lib ctest --output-on-failure -C Release
+DYLD_LIBRARY_PATH=${PREFIX}/lib ctest --output-on-failure -C Release
