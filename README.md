@@ -81,7 +81,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libignition--sensors4-green.svg)](https://anaconda.org/conda-forge/libignition-sensors4) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libignition-sensors4.svg)](https://anaconda.org/conda-forge/libignition-sensors4) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libignition-sensors4.svg)](https://anaconda.org/conda-forge/libignition-sensors4) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libignition-sensors4.svg)](https://anaconda.org/conda-forge/libignition-sensors4) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libignition--sensors5-green.svg)](https://anaconda.org/conda-forge/libignition-sensors5) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libignition-sensors5.svg)](https://anaconda.org/conda-forge/libignition-sensors5) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libignition-sensors5.svg)](https://anaconda.org/conda-forge/libignition-sensors5) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libignition-sensors5.svg)](https://anaconda.org/conda-forge/libignition-sensors5) |
 
 Installing libignition-sensors
 ==============================
@@ -92,16 +92,16 @@ Installing `libignition-sensors` from the `conda-forge` channel can be achieved 
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `libignition-sensors4` can be installed with:
+Once the `conda-forge` channel has been enabled, `libignition-sensors5` can be installed with:
 
 ```
-conda install libignition-sensors4
+conda install libignition-sensors5
 ```
 
-It is possible to list all of the versions of `libignition-sensors4` available on your platform with:
+It is possible to list all of the versions of `libignition-sensors5` available on your platform with:
 
 ```
-conda search libignition-sensors4 --channel conda-forge
+conda search libignition-sensors5 --channel conda-forge
 ```
 
 
