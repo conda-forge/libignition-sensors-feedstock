@@ -8,11 +8,12 @@ cmake ${CMAKE_ARGS} \
       -DCMAKE_PREFIX_PATH=$PREFIX \
       -DCMAKE_INSTALL_PREFIX=$PREFIX \
       -DCMAKE_INSTALL_LIBDIR=lib \
-      -DCMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=True \
+      -DCMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=TRUE \
+      -DCMAKE_MACOSX_RPATH=FALSE \
       -DBUILD_SHARED_LIBS=ON \
       -DBUILD_TESTING=ON \
       ..
 
 cmake --build . --config Release
 cmake --build . --config Release --target install
-ctest --output-on-failure -C Release
+DYLD_FALLBACK_LIBRARY_PATH=${PREFIX}/lib ctest --output-on-failure -C Release
