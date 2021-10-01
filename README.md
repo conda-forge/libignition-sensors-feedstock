@@ -53,7 +53,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libignition--sensors5-green.svg)](https://anaconda.org/conda-forge/libignition-sensors5) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libignition-sensors5.svg)](https://anaconda.org/conda-forge/libignition-sensors5) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libignition-sensors5.svg)](https://anaconda.org/conda-forge/libignition-sensors5) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libignition-sensors5.svg)](https://anaconda.org/conda-forge/libignition-sensors5) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libignition--sensors6-green.svg)](https://anaconda.org/conda-forge/libignition-sensors6) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libignition-sensors6.svg)](https://anaconda.org/conda-forge/libignition-sensors6) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libignition-sensors6.svg)](https://anaconda.org/conda-forge/libignition-sensors6) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libignition-sensors6.svg)](https://anaconda.org/conda-forge/libignition-sensors6) |
 
 Installing libignition-sensors
 ==============================
@@ -65,16 +65,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libignition-sensors5` can be installed with:
+Once the `conda-forge` channel has been enabled, `libignition-sensors6` can be installed with:
 
 ```
-conda install libignition-sensors5
+conda install libignition-sensors6
 ```
 
-It is possible to list all of the versions of `libignition-sensors5` available on your platform with:
+It is possible to list all of the versions of `libignition-sensors6` available on your platform with:
 
 ```
-conda search libignition-sensors5 --channel conda-forge
+conda search libignition-sensors6 --channel conda-forge
 ```
 
 
