@@ -30,11 +30,11 @@ requirements:
     - libprotobuf
     - libignition-math6
     - libignition-common4
-    - libignition-transport10
-    - libignition-rendering5
-    - libignition-msgs7
+    - libignition-transport11
+    - libignition-rendering6
+    - libignition-msgs8
     - libignition-plugin1
-    - libsdformat11
+    - libsdformat12
     - libarchive  # [osx]
     - ogre  {{ ogre }}
   run:
