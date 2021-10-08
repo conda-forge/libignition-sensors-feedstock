@@ -39,7 +39,6 @@ requirements:
     - ogre  {{ ogre }}
   run:
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
-    - {{ pin_compatible('ogre', max_pin='x.x') }}
 
 test:
   commands:
