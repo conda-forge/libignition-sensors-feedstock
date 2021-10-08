@@ -14,8 +14,7 @@ source:
     sha256: 2484b82d2122633956fdf3fab9e8a41fd8c18de3055d059ec461c9b9153c3257
 
 build:
-  number: 3
-  skip: true  # [osx]
+  number: 4
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
@@ -36,6 +35,8 @@ requirements:
     - libignition-msgs7
     - libignition-plugin1
     - libsdformat11
+    - libarchive  # [osx]
+    - ogre  {{ ogre }}
   run:
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
