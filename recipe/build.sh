@@ -18,7 +18,7 @@ cmake --build . --config Release
 cmake --build . --config Release --target install
 
 if [[ ${HOST} =~ .*darwin.* ]]; then
-    ctest -VV --output-on-failure -C Release -E "UNIT_Lidar_TEST|UNIT_Camera_TEST|INTEGRATION"
+    ctest -VV --output-on-failure -C Release -E "UNIT_Lidar_TEST|UNIT_Camera_TEST"
 else
     ctest -VV --output-on-failure -C Release
 fi
