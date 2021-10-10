@@ -22,5 +22,5 @@ cmake --build . --config Release --target install
 if errorlevel 1 exit 1
 
 :: Test.
-ctest -C Release
+ctest -VV -C Release  -E "UNIT_Lidar_TEST|UNIT_Camera_TEST|INTEGRATION"
 if errorlevel 1 exit 1
