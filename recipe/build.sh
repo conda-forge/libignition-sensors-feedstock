@@ -18,7 +18,9 @@ cmake --build . --config Release
 cmake --build . --config Release --target install
 
 if [[ ${HOST} =~ .*darwin.* ]]; then
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" ]]; then
     ctest --output-on-failure -C Release -E "UNIT_Lidar_TEST|UNIT_Camera_TEST|INTEGRATION_camera_plugin|INTEGRATION_depth_camera_plugin|INTEGRATION_gpu_lidar_sensor_plugin|INTEGRATION_rgbd_camera_plugin|INTEGRATION_thermal_camera_plugin"
+fi
 else
     ctest --output-on-failure -C Release
 fi
