@@ -1,6 +1,6 @@
 {% set component_name = "sensors" %}
 {% set base_name = "libignition-" + component_name %}
-{% set version = "6_6.0.0" %}
+{% set version = "6_6.0.1" %}
 {% set version_package = version.split('_')[1] %}
 {% set major_version = version.split('_')[0] %}
 {% set name = base_name + major_version %}
@@ -11,7 +11,7 @@ package:
 
 source:
   - url: https://github.com/ignitionrobotics/ign-{{ component_name }}/archive/ignition-{{ component_name }}{{ version }}.tar.gz
-    sha256: ad9da18d8d1316bccfe86e943c3f66b806cf3614bcf79479fc86c94a0c3680de
+    sha256: ef2660afa81be09f70881a22ddb4609eb627527a1b47040ce4ea99f35dddbc2c
 
 build:
   number: 0
