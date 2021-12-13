@@ -18,7 +18,7 @@ cmake --build . --config Release
 cmake --build . --config Release --target install
 
 if [[ ${HOST} =~ .*darwin.* ]]; then
-if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" ]]; then
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
     ctest -VV --output-on-failure -C Release -E "UNIT_Lidar_TEST|UNIT_Camera_TEST|INTEGRATION"
 fi
 else
