@@ -31,7 +31,7 @@ requirements:
     - libignition-math6
     - libignition-common4
     - libignition-transport11
-    - libignition-rendering6
+    - libignition-rendering6 >=6.2
     - libignition-msgs8
     - libignition-plugin1
     - libsdformat12
