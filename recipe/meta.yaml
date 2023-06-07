@@ -38,7 +38,7 @@ requirements:
     - libignition-plugin1
     - libsdformat12
     - libarchive  # [osx]
-    - ogre  {{ ogre }}
+    - ogre 1.10.*
   run:
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
