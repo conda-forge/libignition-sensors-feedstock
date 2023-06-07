@@ -12,9 +12,11 @@ package:
 source:
   - url: https://github.com/ignitionrobotics/ign-{{ component_name }}/archive/ignition-{{ component_name }}{{ version }}.tar.gz
     sha256: 3f1ed7159f299506614fd566eb0688c4858270720008848cac5faf14e9c2c809
+    patches:
+      - 351.patch
 
 build:
-  number: 3
+  number: 4
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
@@ -36,7 +38,7 @@ requirements:
     - libignition-plugin1
     - libsdformat12
     - libarchive  # [osx]
-    - ogre  {{ ogre }}
+    - ogre 1.10.*
   run:
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
