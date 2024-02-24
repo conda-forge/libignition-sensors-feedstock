@@ -15,7 +15,7 @@ cxx_compiler_version:
 libarchive:
 - '3.7'
 libprotobuf:
-- 4.25.1
+- 4.25.2
 macos_machine:
 - arm64-apple-darwin20.0.0
 target_platform:
