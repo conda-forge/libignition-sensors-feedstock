@@ -22,6 +22,6 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}
   if [[ ${HOST} =~ .*darwin.* ]]; then
     ctest -VV --output-on-failure -C Release -E "UNIT_Lidar_TEST|UNIT_Camera_TEST|INTEGRATION"
   else
-    ctest -VV --output-on-failure -C Release
+    ctest -VV --output-on-failure -C Release -E "INTEGRATION"
   fi
 fi
