@@ -17,8 +17,8 @@ cmake ${CMAKE_ARGS} \
 cmake --build . --config Release
 cmake --build . --config Release --target install
 
-
-if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
+# We do not run tests in emulation due to https://github.com/conda-forge/libignition-sensors-feedstock/pull/57#issuecomment-2599749465
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" ]]; then
   if [[ ${HOST} =~ .*darwin.* ]]; then
     ctest -VV --output-on-failure -C Release -E "UNIT_Lidar_TEST|UNIT_Camera_TEST|INTEGRATION"
   else
